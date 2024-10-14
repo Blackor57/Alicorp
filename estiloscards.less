@@ -1,0 +1,153 @@
+/* Variables para la sección de servicios */
+@font-family-servicios: 'Georgia', 'Times New Roman', serif; 
+@servicios-container-max-width: 1100px; 
+@servicios-title-color: #1b501b;; 
+@servicios-card-bg-color: #fff; 
+@servicios-card-shadow-light: rgba(0, 0, 0, 0.2); 
+@servicios-card-shadow-dark: rgba(0, 0, 0, 0.4); 
+@servicios-link-color: #ff010d; 
+@servicios-link-hover-bg: #fa0202; 
+@servicios-link-hover-color: #fff; 
+@servicios-text-color: #6a6a6a; 
+@dot-color-fondo:#faf9f5;
+/* Reset básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:@font-family-servicios; /* Usar variable de fuente */
+}
+/* Estilos del contenedor de tarjetas de servicios */
+.servicios-section { /* Clase específica para la sección de servicios */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:@font-family-servicios; /* Usar variable de fuente */
+    
+    background-color: @dot-color-fondo;
+    /* Estilos del título */
+    .title-cards {
+        width: 100%;
+        max-width: 1080px;
+        margin: auto;
+        padding: 20px;
+        margin-top: 20px;
+        text-align: center;
+        color: @servicios-title-color; /* Usar variable de color del título */
+        font-size: 20px; /* Tamaño de fuente para el título */
+        font-weight: normal; /* Negrita para el título */
+        
+    }
+    .parrafo {
+        line-height: 1.8;
+        color: @servicios-text-color;
+        font-size:16px;
+        text-align: center;
+    }
+
+    .container-card {
+        width: 100%;
+        display: flex;
+        max-width: @servicios-container-max-width; /* Usar variable para el ancho máximo */
+        margin: auto;
+
+        /* Estilos de las tarjetas */
+        .card {
+            width: calc(33.33% - 40px); /* Ajuste para márgenes */
+            margin: 20px;
+            border-radius: 6px;
+            overflow: hidden;
+            background: @servicios-card-bg-color; /* Usar variable de fondo de tarjeta */
+            box-shadow: 0px 1px 10px @servicios-card-shadow-light; /* Usar variable de sombra */
+            transition: all 400ms ease-out;
+            &:hover {
+                box-shadow: 5px 5px 20px @servicios-card-shadow-dark; /* Usar variable de sombra al hover */
+                transform: translateY(-3%);
+            }
+
+            img {
+                width: 100%;
+                height: 210px;
+            }
+
+            .contenido-card {
+                padding: 15px;
+                text-align: center;
+
+                h3 {
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    margin-bottom: 15px;
+                    color: @servicios-title-color; /* Usar variable de color del título */
+                }
+
+                p {
+                    line-height: 1.8;
+                    color: @servicios-text-color; /* Usar variable de color del texto */
+                    font-size: 14px;
+                }
+
+                a {
+                    display: inline-block;
+                    padding: 10px;
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: @servicios-link-color; /* Usar variable de color del enlace */
+                    border: 1px solid @servicios-link-color; /* Usar variable de color del enlace */
+                    border-radius: 4px;
+                    transition: all 400ms ease;
+
+                    &:hover {
+                        background: @servicios-link-hover-bg; /* Usar variable de fondo al hover */
+                        color: @servicios-link-hover-color; /* Usar variable de color al hover */
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Media Queries para pantallas pequeñas */
+@media only screen and (max-width:768px) {
+    .servicios-section { /* Asegurando que se aplique a la sección correcta */
+        .container-card {
+            flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+        }
+        
+        .card {
+            width: calc(50% - 40px); /* Dos tarjetas por fila en pantallas medianas */
+            margin-bottom: 20px; /* Espacio inferior entre tarjetas */
+        }
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .servicios-section { /* Asegurando que se aplique a la sección correcta */
+        .card {
+            width: calc(100% - 40px); /* Una tarjeta por fila en pantallas pequeñas */
+        }
+    }
+}
+
+.about__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .about__icons {
+        padding: 0 15px;
+        text-align: center;
+        position: relative;
+        
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 60%; /* Ajusta este valor según lo necesites */
+            width: 1px;
+            background-color: #d3d3d3; /* Color de la línea */
+        }
+    }
+}

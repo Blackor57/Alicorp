@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Home | Alicorp</title>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <link rel="stylesheet/less" type="text/css" href="estiloscards.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylessomos.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylescarrusel.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylesfooter.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylessbarra.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylescurso.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+
+<body>
+    <!-- Barra de menú -->
+    <header class="header-menu">
+        <figure class="logo-container">
+            <img src="https://www.alicorp.com.pe/static/images/logo-alicorp.png" alt="Logo" class="logo-image">
+        </figure>
+        <span class="mean-toggle"></span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#">Sostenibilidad</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentLocation = window.location.href; // Obtiene la URL actual
+            const menuItems = document.querySelectorAll('nav ul li a');
+
+            menuItems.forEach(item => {
+                if (item.href === currentLocation) {
+                    item.classList.add('active'); // Agrega 'active' al enlace correspondiente
+                } else {
+                    item.classList.remove('active'); // Elimina 'active' de otros enlaces
+                }
+            });
+        });
+    </script>
+    <!-- Carrusel -->
+    
+
+    <section class="slider">
+        <article class="list">
+            <figure class="item">
+                <img src="https://www.alicorp.com.pe/media/JPG/hero_inicio_1920x500_desktop_memoria2023.jpg" alt="">
+                <figcaption class="texto-contenedor">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Alicorp</p>
+                    <h2>Memoria Anual 2024</h2>
+                    <p></p>
+                    <br>
+                    <button>Conoce más aquí</button>
+                </figcaption>
+            </figure>
+            <figure class="item">
+                <img src="https://www.alicorp.com.pe/media/JPG/Banner_1920x873_Resultados_08.jpg" alt="">
+                <figcaption class="texto-contenedor">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Alicorp</p>
+                    <h2>Resultados Financieros T4</h2>
+                    <!--<p>Ventas consolidadas por S/3,532 millones</p>-->
+                    <button>Más Información</button>
+                </figcaption>
+            </figure>
+            <figure class="item">
+                <img src="https://www.alicorp.com.pe/media/JPG/portada_web_0004_v1_bxNdYxT_8U1DoB2.jpg" alt="">
+                <figcaption class="texto-contenedor">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Alicorp</p>
+                    <h2>Ollas que desarrollan</h2>
+                    <p>Estamos comprometidos y ayudando a 110 ollas comunes en todo el Perú</p>
+                    <br>
+                    <button>Más Información</button>
+                </figcaption>
+            </figure>
+            <figure class="item">
+                <img src="https://www.alicorp.com.pe/media/JPG/Crecemos-1920x873_1_Oxe7e8N_HVgJxsh_MyQaPxf.jpg" alt="">
+                <figcaption class="texto-contenedor">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <p>Conoce nuestra web</p>
+                    <h2>Crecemos Juntos</h2>
+                    <p>Capacítate y mejora tu negocio</p>
+                    <br>
+                    <br>
+                    <button>Más Información</button>
+                </figcaption>
+            </figure>
+        </article>
+        <nav class="buttons">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </nav>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+
+
+
+
+    <br><br>
+
+    <!-- Sección de negocios -->
+    <section class="container about">
+        <h2 class="subtitle">Nuestros negocios</h2>
+        <section class="about__main">
+            <article class="about__icons">
+                <img src="https://www.alicorp.com.pe/media/SVG/ICONOS_ALICORP_2-02_us1Gqh6.svg" class="about__icon"
+                    alt="Shapes icon">
+                <h3 class="about__title">Consumo masivo</h3>
+                <p class="about__paragraph">Alimentos, cuidado del hogar y cuidado personal</p>
+            </article>
+            <article class="about__icons">
+                <img src="https://www.alicorp.com.pe/media/SVG/ICONOS_ALICORP_2-04-05-05.svg" class="about__icon"
+                    alt="Paint icon">
+                <h3 class="about__title">Molienda</h3>
+                <p class="about__paragraph">Harinas y aceites refinados elaborados a partir de semillas de girasol y
+                    soya</p>
+            </article>
+            <article class="about__icons">
+                <img src="https://www.alicorp.com.pe/media/SVG/ICONOS_ALICORP_2-04-04.svg" class="about__icon"
+                    alt="Code icon">
+                <h3 class="about__title">Alicorp Soluciones</h3>
+                <p class="about__paragraph">Ingredientes e insumos para los sectores de Panificación, Gastronomía y
+                    Grandes Industrias</p>
+            </article>
+            <article class="about__icons">
+                <img src="https://www.alicorp.com.pe/media/SVG/ICONOS_ALICORP_2-03_w2OwzJe.svg" class="about__icon"
+                    alt="Code icon">
+                <h3 class="about__title">Acuicultura</h3>
+                <p class="about__paragraph">Alimentos balanceados para camarón, salmón y peces</p>
+            </article>
+        </section>
+    </section>
+    <br><br><br><br>
+
+    <!-- Sección de desarrollo sostenible -->
+    <section class="servicios-section">
+        <br>
+        <header class="title-cards">
+            <h2>Nuestro modelo de desarrollo sostenible</h2>
+        </header>
+        <p class="parrafo">Gestionamos nuestro negocio con un enfoque de generación de valor compartido</p>
+        <br><br>
+        <section class="container-card">
+            <article class="card servicio-card">
+                <figure>
+                    <img src="https://www.alicorp.com.pe/media/PNG/salud.png" alt="Diseño Gráfico">
+                </figure>
+                <section class="contenido-card">
+                    <h3>Bienestar</h3>
+                    <p>"Promovemos hábitos y estilos de vida balanceados en nuestros consumidores, colaboradores y en la
+                        sociedad."</p>
+                    <a href="#">Leer Más</a>
+                </section>
+            </article>
+            <article class="card servicio-card">
+                <figure>
+                    <img src="https://www.alicorp.com.pe/media/JPG/04.3_Banner_medioambiente.jpg"
+                        alt="Gestión de Redes">
+                </figure>
+                <section class="contenido-card">
+                    <h3>Cuidado del ambiente</h3>
+                    <p>"Nuestras operaciones buscan constantemente generar eficiencias para reducir el impacto
+                        ambiental."</p>
+                    <a href="#">Leer Más</a>
+                </section>
+            </article>
+            <article class="card servicio-card">
+                <figure>
+                    <img src="https://www.alicorp.com.pe/media/PNG/04.4_Banner_cadenavalor_PnWjnic_1.png"
+                        alt="Desarrollo Web">
+                </figure>
+                <section class="contenido-card">
+                    <h3>Desarrollo de la cadena de valor</h3>
+                    <p>"Fortalecemos las capacidades de nuestros principales grupos de interés para fomentar el
+                        emprendimiento."</p>
+                    <a href="#">Leer Más</a>
+                </section>
+            </article>
+        </section>
+    </section>
+
+
+    <!--SECCION 2-->
+    <section class="servicios-section"> <!-- Clase específica para evitar conflictos -->
+        <br>
+        <!-- Título de las tarjetas -->
+        <header class="title-cards">
+            <h2>Nuestros programas</h2>
+        </header>
+
+        <br>
+
+        <!-- Contenedor de tarjetas -->
+        <section class="container-card">
+            <!-- Tarjeta 1 -->
+            <article class="card servicio-card"> <!-- Clase única para las tarjetas -->
+                <figure>
+                    <img src="https://www.alicorp.com.pe/static/images/home/AyudaalqueAyuda.jpg" alt="Diseño Gráfico">
+                </figure>
+                <section class="contenido-card">
+                    <h3>Ayuda Al Que Ayuda</h3>
+                    <p>"Desde el inicio de la pandemia asumimos el triple compromiso de mantener el abastecimiento de
+                        productos de primera necesidad, asegurar el cuidado de nuestros colaboradores y ayudar a
+                        afrontar la emergencia sanitaria a los que están en el frente de batalla y a nuestras
+                        comunidades."</p>
+                    <a href="#">Leer Más</a>
+                </section>
+            </article>
+
+
+
+            <!-- Tarjeta 2 -->
+            <article class="card servicio-card">
+                <figure>
+                    <img src="https://www.alicorp.com.pe/static/images/home/Srta-Rossmery_1920x720.png"
+                        alt="Gestión de Redes">
+                </figure>
+                <section class="contenido-card">
+                    <h3>Programa Palma Sostenible</h3>
+                    <p>"Iniciativa que promueve la agroindustria palmera peruana sostenible y que lideramos junto a las
+                        organizaciones Solidaridad y Nes Naturaleza. A través de este programa brindamos capacitaciones
+                        a más de 1,000 agricultores para que puedan optar por una certificación RSPO, que asegura el
+                        origen sostenible de la palma."</p>
+                    <a href="#">Leer Más</a>
+                </section>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="card servicio-card">
+                <figure>
+                    <img src="https://www.alicorp.com.pe/static/images/home/lomo-saltado_1920x720.png"
+                        alt="Desarrollo Web">
+                </figure>
+                <section class="contenido-card">
+                    <h3>Crecemos Juntos</h3>
+                    <p>"Programa mediante el cual brindamos asesorías y capacitaciones a los negocios, especialmente del
+                        segmento de restaurantes y panaderías, que se han visto fuertemente afectados por la pandemia.
+                        Esta iniciativa viene acompañando a más de 25 mil negocios en su proceso de reactivación a nivel
+                        nacional."</p>
+                    <a href="#">Leer Más</a>
+                </section>
+            </article>
+        </section>
+    </section>
+
+    <!-- Script JavaScript -->
+    <script src="script.js"></script>
+    <link rel="stylesheet/less" type="text/css" href="stylesfooter.less" />
+
+    <article class="seccion-curso1">
+        <section class="contenedor-curso1 container1">
+            <section class="textos-curso1">
+                <h2 class="titulo-curso1">Oportunidades Alicorp</h2>
+                <p class="descripcion-curso1">Entérate de las oportunidades que tenemos para ti</p>
+                <a href="#" class="boton-cta1">Conoce más</a>
+            </section>
+            <figure class="contenedor-imagen-curso1">
+                <img src="https://i.pinimg.com/564x/de/c4/c0/dec4c05006dc32b8bf6b53a93835edcf.jpg"
+                    class="imagen-curso1" alt="Imagen de Oportunidades Alicorp">
+            </figure>
+        </section>
+    </article>
+
+
+
+
+
+
+
+    <footer class="footer">
+        <ul class="waves">
+            <li class="wave" id="wave1"></li>
+            <li class="wave" id="wave2"></li>
+            <li class="wave" id="wave3"></li>
+            <li class="wave" id="wave4"></li>
+        </ul>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.facebook.com/alicorpOficial?locale=es_LA" target="_blank"
+                    rel="noopener noreferrer">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://x.com/alicorpoficial?lang=es">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.instagram.com/alicorpoficial/?hl=es">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+
+        <a href="formulario.html" class="reclamaciones">
+            Libro de Reclamaciones
+            <ion-icon name="book"></ion-icon>
+        </a>
+
+
+
+
+        <button id="scrollToTop" class="scroll-button">
+            <ion-icon name="caret-up-circle-outline"></ion-icon>
+        </button>
+
+        <script>
+            //seccion del boton
+            document.getElementById("scrollToTop").addEventListener("click", function () {
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave hacia arriba
+            });
+        </script>
+
+        <section class="container container-footer">
+            <article class="menu-footer">
+                <nav class="contact-info">
+                    <p class="title-footer">Acerca de Alicorp</p>
+                    <ul>
+                        <li>Nosotros</li>
+                        <li>Dónde estamos</li>
+                        <li>Oportunidades Alicorp</li>
+                        <li>Inversionistas</li>
+                        <li>Clientes y proveedores</li>
+                        <li>Promociones</li>
+                    </ul>
+
+                </nav>
+
+                <article class="information">
+                    <p class="title-footer">Productos y soluciones</p>
+                    <ul>
+                        <li><a href="#">Acuicultura</a></li>
+                        <li><a href="#">Alicorp Soluciones</a></li>
+                        <li><a href="#">Consumo masivo</a></li>
+
+                    </ul>
+                </article>
+
+                <article class="my-account">
+                    <p class="title-footer">Sostenibilidad</p>
+
+                    <ul>
+                        <li><a href="#">Bienestar</a></li>
+                        <li><a href="#">Cuidado del ambiente</a></li>
+                        <li><a href="#">Desarrollo de la cadena de valor</a></li>
+                        <li><a href="#">Política de abastecimiento responsable</a></li>
+
+                    </ul>
+                </article>
+
+
+            </article>
+            <article class="menu-footer">
+                <section class="contact-info">
+                    <p class="title-footer">Central telefónica</p>
+                    <ul>
+                        <li>De Lunes a Sábado,
+                            9:00 am a 7:00 pm</li>
+                        <br>
+                        <br>
+                        <p class="title-footer">Lima</p>
+                        <li>+511 315 0800</li>
+                    </ul>
+                </section>
+
+                <article class="information">
+                    <p class="title-footer">Declaración de beneficiario final</p>
+                    <ul>
+                        <li><a href="#">Alicorp S.A.A.</a></li>
+                        <li><a href="#">Alicorp Inversiones S.A.</a></li>
+                        <li><a href="#">Consorcio Distribuidor Iquitos S.A.</a></li>
+                        <li><a href="#">Prooriente S.A.</a></li>
+                        <li><a href="#">Intradevco Industrial S.A.</a></li>
+                        <li><a href="#">Masterbread S.A.</a></li>
+                        <li><a href="#">Vitapro S.A.</a></li>
+                        <li><a href="#">R. Trading S.A.</a></li>
+                    </ul>
+                </article>
+
+                <article class="my-account">
+                    <p class="title-footer">Cláusula informativa para reclamos</p>
+
+                    <ul>
+                        <li><a href="#">Acceder a la información aquí.</a></li>
+                        <br>
+                        <br>
+                        <p class="title-footer">Servicio al cliente</p>
+
+                        <li><a href="#">De Lunes a Viernes,
+                                8:00 am a 6:00 pm
+                                Sábado 9:00 am a 2:00 pm</a></li>
+                        <br>
+                        <br>
+                        <p class="title-footer">Lima</p>
+
+                        <li><a href="#">+511 708 9300</a></li>
+                    </ul>
+                </article>
+
+                <article class="newsletter">
+                    <p class="title-footer">Información pública de Alicorp</p>
+
+                    <div class="content">
+                        <p>Para acceder a la información pública de Alicorp que se difunde en el Portal del Mercado de
+                            Valores puedes hacer click aquí.</p>
+                        <br>
+                        <br>
+                        <button>Libro de Reclamaciones</button>
+                    </div>
+                </article>
+            </article>
+
+            <article class="copyright">
+
+                <p>&copy; 2024 Alicorp. Todos los derechos reservados.</p>
+            </article>
+        </section>
+
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/81581fb069.js" crossorigin="anonymous"></script>
+
+    <script src="Assets/Js/script.js"></script>

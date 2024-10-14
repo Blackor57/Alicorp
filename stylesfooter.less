@@ -1,0 +1,367 @@
+// Importar fuente
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+// Variables específicas del footer
+@footer-bg-color: #ff0000;
+@footer-text-color: #fff;
+@wave-image-url: "https://i.ibb.co/Rb2v0m3/image-1.png";
+@font-family-footer: 'Poppins', sans-serif;
+
+
+.footer {
+    margin-top: 150px;
+    position: relative;
+    width: 100%;
+    background: @footer-bg-color;
+    min-height: 100px;
+    padding: 40px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: @font-family-footer;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link {
+    font-size: 2rem;
+    color: @footer-text-color;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover {
+    transform: translateY(-10px);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: @footer-text-color;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: @footer-text-color;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(@wave-image-url);
+    background-size: 1000px 100px;
+    z-index: 0; // Asegúrate de que esté detrás del botón
+}
+
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
+// Animaciones de las olas
+@keyframes animateWaves {
+    0% {
+        background-position-x: 1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        background-position-x: -1000px;
+    }
+
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+.reclamaciones {
+    display: inline-flex; 
+    flex-direction: column; // Asegura que el ícono esté debajo del texto
+    align-items: center; // Centrar horizontalmente
+    text-align: center; // Centrar el texto
+    font-size: 16px; // Ajusta el tamaño del texto
+    color: white; // Color del texto
+    transition: color 0.3s ease; // Efecto suave al pasar el ratón
+
+    ion-icon {
+        font-size: 24px; // Tamaño del ícono (ajusta según tu preferencia)
+        margin-top: 5px; // Espacio entre el texto y el ícono
+    }
+
+    &:hover {
+        color: #f0f0f0; 
+    }
+}
+
+.scroll-button {
+    position: fixed; // Fijo en la pantalla
+    bottom: 40px; // Espaciado desde abajo
+    left: 40px; // Espaciado desde la izquierda
+    width: 50px; // Ancho del botón
+    height: 50px; // Alto del botón
+    border: none; // Sin borde
+    border-radius: 50%; // Redondeado
+    background-color: white; // Color de fondo
+    color: black; // Color del texto
+    font-size: 24px; // Tamaño del texto
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); // Sombra para darle profundidad
+    cursor: pointer; // Cambiar cursor al pasar el mouse
+    transition: background-color 0.3s; // Transición suave
+    z-index: 1000; // Asegura que el botón esté por encima de otros elementos
+    display: flex; // Usar flexbox
+    align-items: center; // Centrar verticalmente
+    justify-content: center; // Centrar horizontalmente
+
+    &:hover {
+        background-color: #f0f0f0; // Color al pasar el mouse
+    }
+
+    ion-icon {
+        font-size: 40px; // Ajusta el tamaño del ícono según sea necesario
+    }
+}
+
+@color_1: white;
+@color_2: #fff;
+@color_3: var(--dark-color);
+@color_4: #eee;
+@color_5: var(--primary-color);
+@font_family_1: 'Poppins', sans-serif;
+@font_family_2: inherit;
+@background_color_1: #FF2C2C;
+@background_color_2: #3b5998;
+@background_color_3: #00acee;
+@background_color_4: #c4302b;
+@background_color_5: #c8232c;
+@background_color_6: #337de3;
+@background_color_7: var(--background-color);
+
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+}
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+.title-footer {
+	font-weight: 600;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	color: @color_1;
+}
+.contact-info {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		li {
+			list-style: none;
+			color: @color_2;
+			font-size: 0.9rem;
+			font-weight: 300;
+		}
+	}
+}
+.information {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		li {
+			list-style: none;
+			color: @color_2;
+			font-size: 0.9rem;
+			font-weight: 300;
+			a {
+				text-decoration: none;
+				color: @color_2;
+				font-weight: 300;
+				&:hover {
+					color: @color_3;
+				}
+			}
+		}
+	}
+}
+.my-account {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+		li {
+			list-style: none;
+			color: @color_2;
+			font-size: 0.9rem;
+			font-weight: 300;
+			a {
+				text-decoration: none;
+				color: @color_2;
+				font-weight: 300;
+				&:hover {
+					color: @color_3;
+				}
+			}
+		}
+	}
+}
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+	span {
+		border-radius: 50%;
+		width: 3rem;
+		height: 3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i {
+			color: @color_2;
+			font-size: 1.2rem;
+		}
+	}
+}
+.facebook {
+	background-color: @background_color_2;
+}
+.twitter {
+	background-color: @background_color_3;
+}
+.youtube {
+	background-color: @background_color_4;
+}
+.pinterest {
+	background-color: @background_color_5;
+}
+.instagram {
+	background: linear-gradient( #405de6, #833ab4, #c13584, #e1306c, #fd1d1d, #f56040, #fcaf45 );
+}
+.content {
+	p {
+		font-size: 1rem;
+		color: @color_2;
+		font-weight: 300;
+	}
+	input {
+		outline: none;
+		background: none;
+		border: none;
+		border-bottom: 2px solid #d2b495;
+		cursor: pointer;
+		padding: 0.5rem 0 1.2rem;
+		color: @color_3;
+		display: block;
+		margin-bottom: 3rem;
+		margin-top: 2rem;
+		width: 100%;
+		font-family: @font_family_2;
+		&::-webkit-input-placeholder {
+			color: @color_4;
+		}
+	}
+	button {
+		border: none;
+		background-color: @background_color_6;
+		color: @color_2;
+		text-transform: uppercase;
+		padding: 1rem 3rem;
+		border-radius: 2rem;
+		font-size: 1rem;
+		font-family: @font_family_2;
+		cursor: pointer;
+		font-weight: 600;
+		&:hover {
+			background-color: @background_color_7;
+			color: @color_5;
+		}
+	}
+}
+.copyright {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: .5em;
+	border-top: .5px solid rgba(255,255,255,0.5);
+	color: @color_2;
+	p {
+		font-weight: 400;
+		font-size: 1.6rem;
+	}
+}

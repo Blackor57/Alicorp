@@ -1,0 +1,155 @@
+ /* Variables del Carrusel */
+ @slider-width: 1513px; // Ancho del slider
+ @slider-height: 600px; // Altura del slider
+ @button-bg-color: #fff5; // Color de fondo de los botones
+ @dot-bg-color: #fff; // Color de fondo de los puntos
+ @dot-active-bg-color: #fff; // Color de fondo del punto activo
+ 
+ .slider {
+     width: @slider-width;
+     max-width: 100vw;
+     height: @slider-height;
+     margin: auto;
+     position: relative;
+     overflow: hidden;
+ 
+     .list {
+         position: absolute;
+         width: max-content;
+         height: 100%;
+         left: 0;
+         top: 0;
+         display: flex;
+         transition: 1.5s;
+ 
+         img {
+             width: @slider-width;
+             max-width: 100vw;
+             height: 100%;
+             object-fit: cover;
+         }
+     }
+     .item {
+         position: relative; /* Asegúrate de que cada item tenga position relative */
+         flex-shrink: 0; /* Evita que los items se reduzcan */
+         width: @slider-width; /* O ajusta según sea necesario */
+     }
+ 
+     .buttons {
+         position: absolute;
+         top: 45%;
+         left: 5%;
+         width: 90%;
+         display: flex;
+         justify-content: space-between;
+        
+ 
+         button {
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             background-color: @button-bg-color; // Color de fondo semi-transparente
+             color: #fff; // Color del texto
+             border: none; // Sin borde
+             font-family: monospace; // Tipo de letra
+             font-weight: bold;
+             font-size: 30px; /* Tamaño del título */
+ 
+             &:hover {
+                 background-color: darken(@button-bg-color, 10%); // Efecto hover (opcional)
+             }
+         }
+     }
+ 
+     .dots {
+         position: absolute;
+         bottom: 10px;
+         left: 0;
+         color: #fff; // Color del texto
+         width: 100%;
+         margin: 0; // Sin margen
+         padding: 0; // Sin padding
+         display: flex; // Flexbox para centrar los puntos
+         justify-content: center; // Centrado horizontal
+ 
+         li {
+             list-style: none; // Sin estilo de lista
+             width: 10px; // Ancho de los puntos
+             height: 10px; // Alto de los puntos
+             background-color: @dot-bg-color; // Color de fondo de los puntos
+             margin: 10px; // Margen entre puntos
+             border-radius: 20px; // Bordes redondeados
+             transition: width 0.5s; // Transición suave para cambios de tamaño
+ 
+             &.active {
+                 width: 30px; // Ancho del punto activo
+                 background-color: @dot-active-bg-color; // Color del punto activo (opcional)
+             }
+         }
+     }
+ }
+ 
+ @media screen and (max-width: 768px) {
+     .slider {
+         height: 400px; // Altura ajustada para pantallas pequeñas
+     }
+ }
+ 
+ .texto-contenedor {
+  
+    justify-content: center;
+     height: 367px;
+     width: 367px;
+     background-image: url("/img/alicorphoja.png");
+     background-color: rgba(253, 253, 253, 0); /* Fondo transparente */
+     color: rgb(255, 255, 255); /* Color del texto */
+     padding: 15px; /* Espaciado interno */
+     position: absolute; /* Para superponerse a la imagen */
+     top: 50%; /* Centrado verticalmente */
+     left: 50%; /* Centrado horizontalmente */
+     transform: translate(-50%, -50%); /* Centra el contenedor en ambas direcciones */
+     border: none; /* Asegúrate de que no haya borde */
+     align-items: center;
+ }
+ 
+ .texto-contenedor h2 {
+     font-size: 55px; /* Tamaño del título */
+     margin: 0; /* Sin margen */
+     text-align: left;
+     color: #ffefd9;
+     margin:  0;
+     width:100%;
+     height: auto;
+     
+ }
+ 
+ .texto-contenedor p {
+    margin-right: 100px;
+    justify-content: center;
+     font-size: 20px; /* Tamaño de la descripción */
+     margin:  0;
+     width:100%;
+     height: auto;
+ }
+ 
+ .texto-contenedor button {
+     background-color: #f23333; /* Color de fondo del botón */
+     color:rgb(255, 255, 255) ; /* Color del texto del botón */
+     border:5px; /* Sin borde */
+     font-size: 16px;
+     height: 50px;
+     
+ 
+    padding :10px 15px ;/* Espaciado interno */
+ 
+    border-radius :5px ;/* Bordes redondeados */
+ 
+    cursor:pointer ;/* Cambia el cursor al pasar sobre el botón */
+ 
+    transition :background-color .3s ease ;/* Transición suave para el hover */
+ 
+    &:hover{
+       background-color:#e6b800 ;/* Color al pasar el mouse por encima */
+ 
+    }
+ }

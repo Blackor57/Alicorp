@@ -1,0 +1,160 @@
+// Variables
+@color-title: #1b501b; // Definir variable para el color del título
+@color-paragraph: #6d756d;
+
+// Estilos generales
+.about {
+    text-align: center;
+    .about__title{
+        color: @color-title;
+        font-size:18px;
+        
+        
+    }
+
+    .subtitle {
+        color: @color-title;
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-size:30px;
+    }
+
+
+
+    .about__paragraph {
+        line-height: 1.8;
+        color: @color-paragraph;
+        font-size:16px;
+        
+    }
+
+    .about__main {
+        padding-top: 10px;
+        display: grid;
+        width: 75%; // Asegúrate de que el contenedor use el ancho completo
+        margin: 0 auto;
+        gap: 1em;
+        overflow: hidden;
+        grid-template-columns: repeat(4, 1fr); // Cuatro columnas iguales
+
+        .about__icons {
+            display: flex; // Cambiado a flex para centrar el contenido
+            flex-direction: column; // Mantiene el contenido en columna
+            align-items: center; // Centra horizontalmente
+            justify-content: center; // Centra verticalmente
+            gap: 1em;
+            width: auto; // Permite que se ajuste automáticamente
+
+            .about__icon {
+                width: 100px;
+            }
+        }
+    }
+}
+
+// Variables
+@color-title: #1b501b; // Definir variable para el color del título
+@color-paragraph: #6d756d;
+@link-bg-color: #ff010d;
+@link-hover-bg: #fa0202;
+@link-color: #fff;
+
+// Estilos generales
+.about {
+    text-align: center;
+
+    .about__title {
+        color: @color-title;
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .about__paragraph {
+        line-height: 1.8;
+        color: @color-paragraph;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .about__link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: @link-bg-color;
+        color: @link-color;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: @link-hover-bg;
+        }
+    }
+}
+
+// Variables
+@color-title: #1b501b; // Definir variable para el color del título
+@color-paragraph: #6d756d;
+@link-bg-color: #ff010d;
+@link-hover-bg: #fa0202;
+@link-border-color: @link-bg-color;
+@link-color: #fff;
+@link-border-hover-color: #fa0202;
+@background-color: #ffffff;
+
+// Estilos generales
+.opportunities-section {
+    background-color: @background-color;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+
+    .opportunities-image {
+        flex: 1;
+        display: flex; // Usamos flexbox en este contenedor
+        justify-content: center; // Centra horizontalmente
+        align-items: center; // Centra verticalmente
+
+        img {
+            width: 70%; // Ajuste del tamaño de la imagen
+            border-radius: 8px;
+        }
+    }
+
+    .opportunities-content {
+        flex: 1;
+        padding-left: 20px;
+
+        .opportunities-title {
+            color: @color-title;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .opportunities-paragraph {
+            color: @color-paragraph;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .opportunities-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: @link-bg-color;
+            color: @link-color;
+            text-decoration: none;
+            border: 1px solid @link-border-color;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+
+            &:hover {
+                background-color: @link-hover-bg;
+                border-color: @link-border-hover-color;
+            }
+        }
+    }
+}
+
+

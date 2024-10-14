@@ -1,0 +1,74 @@
+// Variables relacionadas con la sección del curso
+@color-fondo-curso: #fdfdfd;
+@color-titulo-curso: #1b501b;
+@color-boton-curso: #fc1010;
+@color-descripcion-curso: #6d756d;
+@border-radius-imagenn: 5%;
+@padding-contenedor: var(--padding-container);
+
+// Estilos Generales
+.container1 {
+    width: 80%;
+    height: 420px;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: @padding-contenedor;
+}
+
+.about1 {
+    text-align: center;
+}
+
+// Sección del Curso
+.seccion-curso1 {
+    background-color: @color-fondo-curso;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, @color-fondo-curso 0.5px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+
+    .contenedor-curso1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1em;
+        align-items: center;
+
+        .textos-curso1 {
+            .titulo-curso1 {
+                color: @color-titulo-curso;
+                font-size: 2rem;
+                margin-bottom: 25px;
+            }
+
+            .descripcion-curso1 {
+                line-height: 1.7;
+                margin-bottom: 15px;
+                color: @color-descripcion-curso;
+            }
+
+            .boton-cta1 {
+                display: inline-block;
+                background-color: @color-boton-curso;
+                justify-self: center;
+                color: #fff;
+                text-decoration: none;
+                padding: 13px 30px;
+                border-radius: 32px; // Bordes circulares
+            }
+        }
+
+        .contenedor-imagen-curso1 {
+            max-width: 500px;
+            border-radius: @border-radius-imagenn; // Bordes circulares
+                object-fit: cover;
+
+            .imagen-curso1 {
+                width: 100%;
+                display: block;
+                border-radius: @border-radius-imagenn; // Bordes circulares
+                object-fit: cover;
+            }
+        }
+    }
+}

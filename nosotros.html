@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Servicios - Tarjetas con efecto Hover</title>
+    <link rel="stylesheet/less" type="text/css" href="stylesfooter.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylesnosotros.less" />
+
+
+    <title>Home | Alicorp</title>
+
+    
+    
+    <link rel="stylesheet/less" type="text/css" href="stylessbarra.less" />
+    <link rel="stylesheet/less" type="text/css" href="stylescurso.less" />
+
+    <script src="https://cdn.jsdelivr.net/npm/less"></script>
+</head>
+
+<body>
+    <!-- Barra de menú -->
+    <header class="header-menu">
+        <figure class="logo-container">
+            <img src="https://www.alicorp.com.pe/static/images/logo-alicorp.png" alt="Logo" class="logo-image">
+        </figure>
+        <span class="mean-toggle"></span>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="#">Sostenibilidad</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const currentLocation = window.location.href; // Obtiene la URL actual
+                const menuItems = document.querySelectorAll('nav ul li a');
+
+                menuItems.forEach(item => {
+                    if (item.href === currentLocation) {
+                        item.classList.add('active'); // Agrega 'active' al enlace correspondiente
+                    } else {
+                        item.classList.remove('active'); // Elimina 'active' de otros enlaces
+                    }
+                });
+            });
+        </script>
+    </header>
+
+    <!-- Sección Nosotros con imagen de fondo -->
+    <section class="about-section" style="background-image: url('img/nosotros.jpg'); background-size: cover; background-position: center;">
+        <article class="about-content" style="padding: 60px 20px; background-color: rgba(255, 255, 255, 0.8); border-radius: 8px; max-width: 800px; margin: auto;">
+            <h1>Sobre Nosotros</h1>
+            <p>Bienvenido a nuestra página de "Nosotros", donde te contamos más acerca de nuestra empresa, misión, visión y valores.</p>
+        </article>
+    </section>
+
+    <footer class="footer">
+        <ul class="waves">
+            <li class="wave" id="wave1"></li>
+            <li class="wave" id="wave2"></li>
+            <li class="wave" id="wave3"></li>
+            <li class="wave" id="wave4"></li>
+        </ul>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.facebook.com/alicorpOficial?locale=es_LA" target="_blank" rel="noopener noreferrer">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://x.com/alicorpoficial?lang=es">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="https://www.instagram.com/alicorpoficial/?hl=es">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+        
+        <a href="formulario.html" class="reclamaciones">
+            Libro de Reclamaciones
+            <ion-icon name="book"></ion-icon>
+        </a>
+        <p>&copy; 2019 Alicorp. Todos los derechos reservados.</p>
+
+        <button id="scrollToTop" class="scroll-button">
+            <ion-icon name="caret-up-circle-outline"></ion-icon>
+        </button>
+
+        <script>
+            //seccion del boton
+            document.getElementById("scrollToTop").addEventListener("click", function() {
+                window.scrollTo({ top: 0, behavior: 'smooth' }); // Desplazamiento suave hacia arriba
+            });
+        </script>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
