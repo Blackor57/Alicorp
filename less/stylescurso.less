@@ -35,6 +35,11 @@
         align-items: center;
 
         .textos-curso1 {
+            display: flex; // Cambiado a flex para centrar
+            flex-direction: column; // Organizar en columna
+            align-items: center; // Centrar horizontalmente
+            text-align: center; // Asegurar que el texto también esté centrado
+
             .titulo-curso1 {
                 color: @color-titulo-curso;
                 font-size: 2rem;
@@ -48,20 +53,23 @@
             }
 
             .boton-cta1 {
-                display: inline-block;
                 background-color: @color-boton-curso;
-                justify-self: center;
                 color: #fff;
                 text-decoration: none;
                 padding: 13px 30px;
                 border-radius: 32px; // Bordes circulares
+                transition: transform 0.3s ease; // Transición suave
+
+                &:hover {
+                    transform: scale(1.1); // Crece un 10% al hacer hover
+                }
             }
         }
 
         .contenedor-imagen-curso1 {
             max-width: 500px;
             border-radius: @border-radius-imagenn; // Bordes circulares
-                object-fit: cover;
+            object-fit: cover;
 
             .imagen-curso1 {
                 width: 100%;
